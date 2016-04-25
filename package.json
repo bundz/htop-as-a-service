@@ -1,0 +1,27 @@
+{
+  "name": "htop-as-a-service",
+  "version": "1.0.0",
+  "description": "A htop service in nodejs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bundz/htop-as-a-service.git"
+  },
+  "keywords": [
+    "htop",
+    "nodejs"
+  ],
+  "author": "Vitor Alano de Ataides",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bundz/htop-as-a-service/issues"
+  },
+  "homepage": "https://github.com/bundz/htop-as-a-service#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "shelljs": "^0.6.0"
+  }
+}
