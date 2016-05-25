@@ -17,7 +17,7 @@ O htop-as-a-service é um serviço REST criado em nodejs que tem como objetivo d
 Com o serviço rodando ele estará escutando por padrão a porta 3001. Atualmente existem dois serviços disponíveis: main e virt-top.
 
 O serviço main é responsável por disponibilizar as informações de uso de cpu e de memória e pode ser acessado através da rota:
-<http://{ip da máquina}:3001/>
+**http://{ip da máquina}:3001/**
 
 o retorno do serviço main é um json como o exemplo abaixo:
 
@@ -45,17 +45,39 @@ o retorno do serviço main é um json como o exemplo abaixo:
 }
 ```
 
-Onde o atributo cpu contem 9 atributos
+Onde o objeto cpu contem 9 atributos
 
 **us:** user cpu time (or) % CPU time spent in user space
+
 **sy:** system cpu time (or) % CPU time spent in kernel space
+
 **ni:** user nice cpu time (or) % CPU time spent on low priority processes
+
 **id:** idle cpu time (or) % CPU time spent idle
+
 **wa:** io wait cpu time (or) % CPU time spent in wait (on disk)
+
 **hi:** hardware irq (or) % CPU time spent servicing/handling hardware interrupts
+
 **si:** software irq (or) % CPU time spent servicing/handling software interrupts
+
 **st:** steal time - - % CPU time in involuntary wait by virtual cpu while hypervisor
+
 **total:** total % CPU usage
 
+O objeto memory contem 6 atributos
+
+**total:** all memory in the system
+
+**used:** tall memory currently in use/reserved by running processes and the OS
+
+**free:** total - used
+
+**shared:** memory being shared by multiple processes
+
+**buffers:** memory reserved by the OS to alloc as buffers when process need them
+
+**cached:** recently used files being stored in ram
+
 O serviço virt-top é responsável por disponibilizar as informações de consumo de cpu e de memória das máquinas virtuais e pode ser acessado através da rota:
-<http://{ip da máquina}:3001/virt-top>
+**http://{ip da máquina}:3001/virt-top**
