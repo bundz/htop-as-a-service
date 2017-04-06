@@ -4,7 +4,8 @@
   "description": "A htop service in nodejs.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,12 @@
   },
   "homepage": "https://github.com/bundz/htop-as-a-service#readme",
   "dependencies": {
-    "express": "^4.13.4",
-    "shelljs": "^0.6.0"
+    "analizejs": "git+https://github.com/bundz/analizejs.git",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "supertest": "^3.0.0"
   }
 }
