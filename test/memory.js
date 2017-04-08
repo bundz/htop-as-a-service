@@ -35,5 +35,14 @@ describe('Memory service', function () {
             expect(response).to.have.property('cached');
         });
 
+        it('should return an urls property with self url and prev', function () {
+
+            expect(response).to.have.property('urls');
+            expect(response.urls).to.have.property('self');
+            expect(response.urls.self).to.be.equals('/memory');
+            expect(response.urls.prev).to.be.equals('/');
+
+        });
+
     });
 });
