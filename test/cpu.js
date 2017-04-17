@@ -86,7 +86,7 @@ describe('Cpu service', function () {
         it('should return status 200', function () {
 
             request(app)
-                .get('/cpu/1')
+                .get('/cpu/0')
                 .expect(200)
                 .end(function (err, res) {
                     response = res.body;
@@ -99,9 +99,9 @@ describe('Cpu service', function () {
 
         });
 
-        it('should return core 1 properties', function() {
+        it('should return core 0 properties', function() {
             expect(response).to.have.property('id');
-            expect(response.id).to.be.equals('1');
+            expect(response.id).to.be.equals('0');
             expect(response).to.have.property('usr');
             expect(response).to.have.property('nice');
             expect(response).to.have.property('sys');
@@ -119,7 +119,7 @@ describe('Cpu service', function () {
             expect(response).to.have.property('urls');
             expect(response.urls).to.have.property('self');
             expect(response.urls).to.have.property('prev');
-            expect(response.urls.self).to.be.equals('/cpu/1');
+            expect(response.urls.self).to.be.equals('/cpu/0');
             expect(response.urls.prev).to.be.equals('/cpu');
 
         });

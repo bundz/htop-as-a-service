@@ -23,7 +23,8 @@
   "homepage": "https://github.com/bundz/htop-as-a-service#readme",
   "dependencies": {
     "analizejs": "git+https://github.com/bundz/analizejs.git",
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "processjs": "git+https://github.com/bundz/processjs.git"
   },
   "devDependencies": {
     "chai": "^3.5.0",
