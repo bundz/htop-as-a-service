@@ -1,5 +1,7 @@
 # htop-as-a-service
 
+[![Build Status](https://travis-ci.org/bundz/htop-as-a-service.svg?branch=master)](https://travis-ci.org/bundz/htop-as-a-service)
+
 ## O que é?
 
 O htop-as-a-service é um serviço REST criado em nodejs que tem como objetivo disponibilizar as informações que podem ser encontradas no aplicativo htop como um serviço REST. 
