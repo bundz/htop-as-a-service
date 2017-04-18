@@ -4,7 +4,7 @@ language: node_js
 node_js:
   - "7"
 before_install:
-    - sudo apt-get intall virt-top
+    - sudo apt-get install virt-top
     - sudo apt-get install sysstat
     - sudo apt-get install git
 install:
