@@ -17,7 +17,7 @@ describe('Memory service', function () {
                 .expect(200)
                 .end(function (err, res) {
                     response = res.body;
-        
+                
                     if(err) return done(err);
 
                     done();

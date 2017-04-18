@@ -17,7 +17,7 @@ describe('Root service', function () {
                 .expect(200)
                 .end(function (err, res) {
                     response = res.body;
-        
+                
                     if(err) return done(err);
 
                     done();
@@ -97,6 +97,47 @@ describe('Root service', function () {
             expect(response.urls).to.have.property('self');
             expect(response.urls.self).to.be.equals('/');
 
+        });
+        
+        it('should return a processes property', function () {
+            
+            expect(response).to.have.property('processes');
+    
+        });
+        
+        it('should return a property urls with self and prev', function () {
+            
+            expect(response.processes).to.have.property('urls');
+            expect(response.processes.urls).to.have.property('self');
+            
+        });
+        
+        it('each process should have properties', function () {
+            
+            response.processes.list.forEach(function (item) {
+                expect(item).to.have.property('user');
+                expect(item).to.have.property('pid');
+                expect(item).to.have.property('cpu');
+                expect(item).to.have.property('mem');
+                expect(item).to.have.property('vsz');
+                expect(item).to.have.property('rss');
+                expect(item).to.have.property('tty');
+                expect(item).to.have.property('stat');
+                expect(item).to.have.property('start');
+                expect(item).to.have.property('time');
+                expect(item).to.have.property('command');
+            });
+            
+        });
+        
+        it('each process should have a urls property with self url', function () {
+            
+            response.processes.list.forEach(function (item) {
+                expect(item).to.have.property('urls');
+                expect(item.urls).to.have.property('self');
+                expect(item.urls.self).to.be.equal('/process/' + item.pid);
+            });
+            
         });
 
     });

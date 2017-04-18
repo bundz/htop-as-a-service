@@ -3,8 +3,6 @@ var assert = require('assert');
 var expect = require('chai').expect;
 var app = require('../lib/app');
 
-
-
 describe('Cpu service', function () {
     context('when send a get to /cpu', function () {
 
@@ -17,7 +15,7 @@ describe('Cpu service', function () {
                 .expect(200)
                 .end(function (err, res) {
                     response = res.body;
-        
+                
                     if(err) return done(err);
 
                     done();
@@ -90,7 +88,7 @@ describe('Cpu service', function () {
                 .expect(200)
                 .end(function (err, res) {
                     response = res.body;
-
+                
                     if(err) return done(err);
 
                     done();
