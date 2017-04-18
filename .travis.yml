@@ -1,0 +1,13 @@
+sudo: required
+dist: trusty
+language: node_js
+node_js:
+  - "7"
+before_install:
+    - sudo apt-get intall -y virt-top
+    - sudo apt-get install -y sysstat
+    - sudo apt-get install -y git
+install:
+    - npm install
+script:
+    - npm test
