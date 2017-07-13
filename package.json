@@ -24,6 +24,7 @@
   "dependencies": {
     "analizejs": "git+https://github.com/bundz/analizejs.git",
     "express": "^4.13.4",
+    "node-hwloc": "https://github.com/bundz/node-hwloc",
     "processjs": "git+https://github.com/bundz/processjs.git"
   },
   "devDependencies": {
